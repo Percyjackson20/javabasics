@@ -1,14 +1,14 @@
 package com.emp;
 
 public class Date {
-static int day;
-static int month;
-static int year;
+int day;
+int month;
+int year;
 public Date()
 {
-	day=5;
-	month=3;
-	year=1998;
+	this.day=6;
+	this.month=3;
+	this.year=1998;
 	
 }
 public int getDay() {
