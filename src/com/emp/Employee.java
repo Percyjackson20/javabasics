@@ -5,52 +5,53 @@ public class Employee {
 	String Firstname;
 	String Secondname;
 	double monthlysalary;
-	public String getFirstname(String a) {
-		Firstname="Firstname is "+a;
+	private double yearlysalary;
+	public String getFirstname() {
 		return Firstname;
 	}
-	public void setFirstname(String firstname) {
-		Firstname = firstname;
+	public String setFirstname(String firstname) {
+		this.Firstname = firstname;
+		return Firstname;
 	}
-	public String getSecondname(String b) {
-		Secondname="Secondname is "+b;
+	public String getSecondname() {
 		return Secondname;
 	}
-	public void setSecondname(String secondname) {
-		Secondname = secondname;
+	public String setSecondname(String secondname) {
+		this.Secondname = secondname;
+		return Secondname;
 	}
-	public double getMonthlysalary(double i) {
+	public double getMonthlysalary() {
+	
+		double i=monthlysalary;
 		if(i>0) {
-		double salary=12*i;
-		 double sal=salary;
-		 double yearly=(salary/10)+sal;
-		double yearlysalary=yearly;
-		return yearlysalary;
-		    }
-		else
-		{
-			return 0;
-		}
-		
+			double salary=12*i;
+			 double yearlysalary=(salary/10)+salary;
+			return yearlysalary;
+			    }
+			else
+			{
+				return 0;
+			}
 	}
-	public void setMonthlysalary(double monthlysalary) {
+	public double setMonthlysalary(double monthlysalary) {
 		this.monthlysalary = monthlysalary;
+		return yearlysalary;
 	}
 	public static void main(String a[])
 	{
 		Employee e1=new Employee();
 		Employee e2=new Employee();
-		String f1=e1.getFirstname("raj");
-		String f2=e2.getFirstname("gowtham");
-		String s1=e1.getSecondname("kumar");
-		String s2=e2.getSecondname("karthick");
-		double m1=e1.getMonthlysalary(20000.0);
-		double m2=e2.getMonthlysalary(25000.0);
-		System.out.println(f1);
-		System.out.println(s1);
-		System.out.println(m1);
-		System.out.println(f2);
-		System.out.println(s2);
-		System.out.println(m2);
+		e1.setFirstname("raj");
+		e2.setFirstname("gowtham");
+		e1.setSecondname("kumar");
+		e2.setSecondname("karthick");
+		e1.setMonthlysalary(20000.0);
+		e2.setMonthlysalary(25000.0);
+		System.out.println(e1.getFirstname());
+		System.out.println(e2.getFirstname());
+		System.out.println(e1.getSecondname());
+		System.out.println(e2.getSecondname());
+		System.out.println(e1.getMonthlysalary());
+		System.out.println(e2.getMonthlysalary());
 	}
 }
