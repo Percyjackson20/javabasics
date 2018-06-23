@@ -12,6 +12,7 @@ public class EvenSum
 	char s[]=String.valueOf(input1).toCharArray();
 	for(int i=0;i<s.length;i++)
 	{
+        //if you want to find odd sum then change only the symbol '==' from '!=' in "if" condition
 	if(Integer.parseInt(String.valueOf(s[i]))%2==0)
 	{
 	t+=Integer.parseInt(String.valueOf(s[i]));
